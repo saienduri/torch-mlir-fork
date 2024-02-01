@@ -53,7 +53,7 @@ def test_import_frozen_exported_program():
             self.p = nn.Parameter(torch.randn(1, 1))
 
         def forward(self, x):
-            return torch.tanh(x) * get_a() * self.b * self.p
+            return torch.tanh(x) * get_a() * self.b * self.p * torch.full((1, 1), 3.141592)
 
     m = fx.export_and_import(Basic(), torch.randn(3, 4))
     print(m)
