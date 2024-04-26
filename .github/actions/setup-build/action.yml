@@ -9,7 +9,7 @@ inputs:
 
   cache-suffix:
     description: |
-      Additional string that is used to compute the ccache hash.
+      Additional string that sed to compute the ccache hash.
       Different jobs running the action need distinct values for this key,
       but the content is irrelevant.
     required: false
